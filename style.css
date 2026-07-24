@@ -1,0 +1,152 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+body{
+background:#000000;
+color:#fff;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+background:#273c5e;
+position:sticky;
+top:0;
+}
+nav h2{
+color:#ff0000;
+}
+.menu a{
+color:#fff;
+text-decoration:none;
+margin:0 10px;
+padding:8px 14px;
+border-radius:20px;
+transition:.3s;
+}
+.menu a:hover{
+background:#58e226;
+color:#000;
+}
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+.hero h1{
+font-size:45px;
+color:#58e226;
+}
+.hero p{
+margin:15px 0;
+}
+.hero button{
+padding:10px 25px;
+border:none;
+border-radius:25px;
+background:#38bdf8;
+cursor:pointer;
+transition:.3s;
+}
+.hero button:hover{
+background:#10b981;
+transform:scale(1.1);
+}
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:40px;
+}
+.card{
+width:200px;
+padding:20px;
+text-align:center;
+background:#1e293b;
+border-radius:15px;
+transition:.3s;
+}
+.card i{
+font-size:45px;
+color:#38bdf8;
+margin-bottom:10px;
+transition:.5s;
+}
+.card:hover{
+background:#58e226;
+transform:translateY(-10px);
+box-shadow:0 0 20px #58e226;
+}
+.card:hover i{
+transform:rotate(360deg);
+color:#fff;
+}
+.side{
+position:fixed;
+left:15px;
+top:35%;
+}
+.side a{
+display:flex;
+align-items:center;
+width:50px;
+padding:12px;
+margin:10px 0;
+background:#38bdf8;
+color:#000;
+text-decoration:none;
+border-radius:30px;
+overflow:hidden;
+transition:.3s;
+}
+.side span{
+margin-left:10px;
+display:none;
+}
+.side a:hover{
+width:140px;
+background:#10b981;
+}
+.side a:hover span{
+display:block;
+}
+footer{
+text-align:center;
+padding:25px;
+background:#1e293b;
+}
+@media(max-width:768px){
+nav{
+flex-direction:column;
+}
+.menu{
+margin-top:10px;
+}
+.cards{
+flex-direction:column;
+align-items:center;
+}
+.hero h1{
+font-size:32px;
+}
+.side{
+top:auto;
+bottom:20px;
+left:20px;
+display:flex;
+gap:10px;
+}
+.side a{
+width:50px;
+}
+.side a:hover{
+width:50px;
+}
+.side span{
+display:none;
+}
+}
