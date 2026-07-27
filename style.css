@@ -1,152 +1,256 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
 }
 body{
-background:#000000;
-color:#fff;
+    background-color:rgb(174, 140, 239);
+    font-family:Arial;
 }
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 8%;
-background:#273c5e;
-position:sticky;
-top:0;
+.navbar{
+    background-color:rgb(0, 8, 15);
+    color:white;
+    padding:15px;
 }
-nav h2{
-color:#ff0000;
+.navbar h2{
+    display:inline;
 }
-.menu a{
-color:#fff;
-text-decoration:none;
-margin:0 10px;
-padding:8px 14px;
-border-radius:20px;
-transition:.3s;
+.navbar ul{
+    list-style:none;
+    margin-top:10px;
 }
-.menu a:hover{
-background:#58e226;
-color:#000;
+.navbar ul li{
+    display:inline;
+    margin-right:20px;
 }
-.hero{
-text-align:center;
-padding:80px 20px;
+.navbar ul li a{
+    color:white;
+    text-decoration:none;
 }
-.hero h1{
-font-size:45px;
-color:#58e226;
+.navbar ul li a:hover{
+    color:yellow;
 }
-.hero p{
-margin:15px 0;
+.home{
+    margin:30px;
 }
-.hero button{
-padding:10px 25px;
-border:none;
-border-radius:25px;
-background:#38bdf8;
-cursor:pointer;
-transition:.3s;
+.home h1{
+    color:crimson;
+    margin-bottom:15px;
 }
-.hero button:hover{
-background:#10b981;
-transform:scale(1.1);
+.home p{
+    margin-bottom:20px;
+    line-height:25px;
 }
-.cards{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-padding:40px;
+.home button{
+    padding:10px;
+    width:120px;
+    background-color:green;
+    color:white;
+    border:none;
 }
-.card{
-width:200px;
-padding:20px;
-text-align:center;
-background:#1e293b;
-border-radius:15px;
-transition:.3s;
+.home button:hover{
+    background-color:orange;
+    cursor:pointer;
 }
-.card i{
-font-size:45px;
-color:#38bdf8;
-margin-bottom:10px;
-transition:.5s;
+.move{
+    margin:30px;
 }
-.card:hover{
-background:#58e226;
-transform:translateY(-10px);
-box-shadow:0 0 20px #58e226;
+.box{
+    width:60px;
+    height:60px;
+    background:red;
+    animation: movebox 7s infinite;
 }
-.card:hover i{
-transform:rotate(360deg);
-color:#fff;
+.color{
+    margin:30px;
 }
-.side{
-position:fixed;
-left:15px;
-top:35%;
+.rgb{
+    width:120px;
+    height:120px;
+    background:red;
+    margin-top:20px;
+    animation:rgbcolor 4s infinite;
 }
-.side a{
-display:flex;
-align-items:center;
-width:50px;
-padding:12px;
-margin:10px 0;
-background:#38bdf8;
-color:#000;
-text-decoration:none;
-border-radius:30px;
-overflow:hidden;
-transition:.3s;
+.scale{
+    margin:30px;
 }
-.side span{
-margin-left:10px;
-display:none;
+.scalebox{
+    width:100px;
+    height:100px;
+    background:rgb(97, 97, 200);
+    margin-top:20px;
+    animation: scalebox 7s infinite;
 }
-.side a:hover{
-width:140px;
-background:#10b981;
+.rotate{
+    margin:30px;
 }
-.side a:hover span{
-display:block;
+.rotatebox{
+    width:100px;
+    height:100px;
+    background:orange;
+    margin-top:20px;
+    animation:rotatebox 3s infinite linear;
+}
+.bounce{
+    margin:30px;
+}
+.ball{
+    width:70px;
+    height:70px;
+    background:green;
+    border-radius:50%;
+    margin-top:20px;
+    animation:bounce 2s infinite;
+}
+.buttons{
+    margin:30px;
+}
+.buttons button{
+    padding:10px;
+    margin-right:15px;
+    border:none;
+    color:white;
+}
+.btn1{
+    background:blue;
+}
+.btn2{
+    background:green;
+}
+.btn3{
+    background:red;
+}
+.btn1:hover{
+    background:black;
+}
+.btn2:hover{
+    background:orange;
+}
+.btn3:hover{
+    background:purple;
+}
+.hoverbox{
+    margin:30px;
+}
+.box1,
+.box2,
+.box3{
+    width:120px;
+    height:120px;
+    border:2px solid black;
+    display:inline-block;
+    text-align:center;
+    line-height:120px;
+    margin-right:20px;
+    margin-top:20px;
+}
+.box1:hover{
+    background:red;
+    color:white;
+}
+.box2:hover{
+    background:green;
+    color:white;
+}
+.box3:hover{
+    background:blue;
+    color:white;
+}
+.fixed{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+}
+.fixed a{
+    background:blue;
+    color:white;
+    padding:12px;
+    text-decoration:none;
+}
+.fixed a:hover{
+    background:red;
 }
 footer{
-text-align:center;
-padding:25px;
-background:#1e293b;
+    margin-top:40px;
+    background:rgb(0, 0, 0);
+    color:white;
+    text-align:center;
+    padding:20px;
 }
-@media(max-width:768px){
-nav{
-flex-direction:column;
+@keyframes movebox{
+    0%{
+        transform:translateX(0px);
+    }
+    50%{
+        transform:translateX(630px);
+    }
+    100%{
+        transform:translateX(0px);
+    }
 }
-.menu{
-margin-top:10px;
+@keyframes rgbcolor{
+    0%{
+        background:red;
+    }
+    25%{
+        background:yellow;
+    }
+    50%{
+        background:green;
+    }
+    75%{
+        background:blue;
+    }
+    100%{
+        background:red;
+    }
 }
-.cards{
-flex-direction:column;
-align-items:center;
+@keyframes scalebox{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.3);
+    }
+    100%{
+        transform:scale(1);
+    }
 }
-.hero h1{
-font-size:32px;
+@keyframes rotatebox{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }
-.side{
-top:auto;
-bottom:20px;
-left:20px;
-display:flex;
-gap:10px;
+@keyframes bounce{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-60px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
 }
-.side a{
-width:50px;
-}
-.side a:hover{
-width:50px;
-}
-.side span{
-display:none;
-}
+@media screen and (max-width:768px){
+    .navbar ul li{
+        display:block;
+        margin-top:10px;
+    }
+    .line{
+        width:100%;
+    }
+    .box1,
+    .box2,
+    .box3{
+        display:block;
+        margin-bottom:20px;
+    }
+    .buttons button{
+        display:block;
+        margin-top:10px;
+    }
+
 }
