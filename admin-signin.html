@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Sign In</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+<div class="min-h-screen flex justify-center items-center px-4">
+<div class="bg-white shadow-xl rounded-xl w-full max-w-md p-8">
+<h1 class="text-3xl font-bold text-center text-red-600">
+Admin Login
+</h1>
+<p class="text-center text-gray-500 mt-2">
+Administrator Access Only
+</p>
+<form id="adminForm" class="mt-8">
+<div class="mb-5">
+<label class="font-medium">
+Admin Email
+</label>
+<input
+type="email"
+id="email"
+required
+placeholder="admin@gmail.com"
+class="w-full mt-2 border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500">
+</div>
+<div class="mb-6">
+<label class="font-medium">
+Password
+</label>
+<input
+type="password"
+id="password"
+required
+placeholder="Enter Password"
+class="w-full mt-2 border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500">
+</div>
+<button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
+Admin Login
+</button>
+</form>
+<div class="mt-8 bg-gray-100 rounded-lg p-4 text-sm">
+<p class="font-semibold">
+Demo Admin
+</p>
+<p>Email : admin@gmail.com</p>
+<p>Password : admin123</p>
+</div>
+<div class="text-center mt-6">
+<a href="signin.html" class="text-blue-600 hover:underline">
+User Login
+</a>
+</div>
+</div>
+</div>
+<script>
+document.getElementById("adminForm").addEventListener("submit",function(e){
+e.preventDefault();
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+if(email.trim() !== "" && password.trim() !== ""){
+window.location.href="admin-dashboard.html";
+}
+else{
+alert("Invalid Admin Credentials");
+}
+});
+</script>
+</body>
+</html>

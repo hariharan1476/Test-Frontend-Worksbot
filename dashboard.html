@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+<div class="flex min-h-screen">
+<div id="overlay" class="fixed inset-0 bg-black/40 hidden z-30 md:hidden"></div>
+<aside id="sidebar" class="fixed md:static inset-y-0 left-0 w-64 bg-blue-700 text-white flex flex-col transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40">
+<div class="flex justify-between items-center p-6 border-b border-blue-600">
+<h1 class="text-2xl font-bold">
+AuthPortal
+</h1>
+<button id="closeBtn" class="text-3xl md:hidden">
+✕
+</button>
+</div>
+<nav class="mt-6 flex-1">
+<a href="#" class="block px-6 py-3 bg-blue-800">
+🏠 Dashboard
+</a>
+<a href="#" class="block px-6 py-3 hover:bg-blue-600">
+👤 Profile
+</a>
+<a href="#" class="block px-6 py-3 hover:bg-blue-600">
+📄 Reports
+</a>
+<a href="#"
+class="block px-6 py-3 hover:bg-blue-600">
+⚙ Settings
+</a>
+<a href="signin.html"
+class="block px-6 py-3 hover:bg-red-600">
+🚪 Logout
+</a>
+</nav>
+<div class="bg-blue-700 flex-1"></div>
+</aside>
+<div class="flex-1">
+<header class="bg-white shadow px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<button id="menuBtn" class="text-3xl md:hidden">
+☰
+</button>
+<h2 class="text-2xl font-bold text-gray-700">
+Dashboard
+</h2>
+</div>
+<div class="flex items-center gap-3">
+<img src="https://i.pravatar.cc/100" class="w-10 h-10 rounded-full">
+<div>
+<p class="font-semibold">
+Hari
+</p>
+<p class="text-sm text-gray-500">
+user@gmail.com
+</p>
+</div>
+</div>
+</header>
+<div class="p-6">
+<div class="bg-white rounded-xl shadow p-6 mb-6">
+    <h1 class="text-3xl font-bold text-gray-800">
+        Welcome Back, Hari 👋
+    </h1>
+    <p class="text-gray-600 mt-2">
+        Manage your account, profile and activities from your dashboard.
+    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white rounded-xl shadow p-6 hover:shadow-xl transition">
+        <div class="flex justify-between items-center">
+            <div>
+                <p class="text-gray-500">
+                    Total Projects
+                </p>
+                <h2 class="text-3xl font-bold mt-2">
+                    12
+                </h2>
+            </div>
+            <div class="text-4xl">
+                📁
+            </div>
+        </div>
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 hover:shadow-xl transition">
+        <div class="flex justify-between items-center">
+            <div>
+                <p class="text-gray-500">
+                    Completed
+                </p>
+                <h2 class="text-3xl font-bold mt-2 text-green-600">
+                    8
+                </h2>
+            </div>
+            <div class="text-4xl">
+                ✅
+            </div>
+        </div>
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 hover:shadow-xl transition">
+        <div class="flex justify-between items-center">
+            <div>
+                <p class="text-gray-500">
+                    Pending
+                </p>
+                <h2 class="text-3xl font-bold mt-2 text-yellow-500">
+                    3
+                </h2>
+            </div>
+            <div class="text-4xl">
+                ⏳
+            </div>
+        </div>
+    </div>
+    <div class="bg-white rounded-xl shadow p-6 hover:shadow-xl transition">
+        <div class="flex justify-between items-center">
+            <div>
+                <p class="text-gray-500">
+                    Notifications
+                </p>
+                <h2 class="text-3xl font-bold mt-2 text-red-500">
+                    5
+                </h2>
+            </div>
+            <div class="text-4xl">
+                🔔
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-white rounded-xl shadow mt-8 p-6">
+    <h2 class="text-2xl font-bold mb-6">
+        My Profile
+    </h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+        <img src="https://i.pravatar.cc/150" class="w-32 h-32 rounded-full border-4 border-blue-600">
+        <div class="flex-1">
+            <p class="mb-2">
+                <strong>Name :</strong> Hari
+            </p>
+            <p class="mb-2">
+                <strong>Email :</strong> user@gmail.com
+            </p>
+            <p class="mb-2">
+                <strong>Role :</strong> User
+            </p>
+            <p class="mb-2">
+                <strong>Status :</strong>
+                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                    Active
+                </span>
+            </p>
+            <button class="mt-5 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+                Edit Profile
+            </button>
+        </div>
+    </div>
+</div>
+<div class="bg-white rounded-xl shadow mt-8 p-6">
+    <h2 class="text-2xl font-bold mb-6">
+        Recent Activity
+    </h2>
+    <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+            <thead>
+                <tr class="bg-blue-600 text-white">
+                    <th class="p-3 text-left">Date</th>
+                    <th class="p-3 text-left">Activity</th>
+                    <th class="p-3 text-left">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b hover:bg-gray-100">
+                    <td class="p-3">25 July 2026</td>
+                    <td class="p-3">
+                        Logged into dashboard
+                    </td>
+                    <td class="p-3">
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                            Success
+                        </span>
+                    </td>
+                </tr>
+                <tr class="border-b hover:bg-gray-100">
+                    <td class="p-3">24 July 2026</td>
+                    <td class="p-3">
+                        Updated Profile
+                    </td>
+                    <td class="p-3">
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                            Updated
+                        </span>
+                    </td>
+                </tr>
+                <tr class="border-b hover:bg-gray-100">
+                    <td class="p-3">23 July 2026</td>
+                    <td class="p-3">
+                        Changed Password
+                    </td>
+                    <td class="p-3">
+                        <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">
+                            Completed
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<footer class="mt-10 text-center text-gray-500 py-6">
+    © 2026 AuthPortal. All Rights Reserved.
+</footer>
+</div>
+</div>
+<script>
+const sidebar=document.getElementById("sidebar");
+const overlay=document.getElementById("overlay");
+const menuBtn=document.getElementById("menuBtn");
+const closeBtn=document.getElementById("closeBtn");
+menuBtn.addEventListener("click",()=>{
+sidebar.classList.remove("-translate-x-full");
+overlay.classList.remove("hidden");
+});
+closeBtn.addEventListener("click",()=>{
+sidebar.classList.add("-translate-x-full");
+overlay.classList.add("hidden");
+});
+overlay.addEventListener("click",()=>{
+sidebar.classList.add("-translate-x-full");
+overlay.classList.add("hidden");
+});
+</script>
+</body>
+</html>

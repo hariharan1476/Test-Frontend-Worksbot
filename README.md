@@ -1,25 +1,30 @@
-# Magnetic Navbar
+# Static Authentication Website
 
-A beginner-friendly Magnetic Navbar and Interactive Grid Background built using HTML, CSS, and JavaScript.
+A simple static authentication website built using **HTML**, **Tailwind CSS**, and **JavaScript**.
 
-## 🚀 Features
+## Features
 
-- Magnetic Navbar
-- Interactive Grid Background
-- Mouse Hover Glow Effect
-- Responsive Layout
-- Beginner-Friendly Code
+- Home Page
+- User Sign In
+- User Sign Up
+- OTP Verification
+- User Dashboard
+- Admin Sign In
+- Admin Dashboard
+- Responsive Design
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML5
-- CSS3
+- Tailwind CSS
 - JavaScript
 
-## ▶️ Run
+## How to Run
 
-Open `index.html` in your browser.
+1. Download or clone the project.
+2. Open `index.html` in your browser.
+3. Navigate through the pages.
 
-## 👨‍💻 Author
+## Note
 
-Hariharan Krishnamoorthy
+This is a **frontend-only** project. Authentication is simulated using JavaScript and does not use a backend or database.

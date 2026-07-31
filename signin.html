@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+<div class="min-h-screen flex items-center justify-center px-4">
+<div class="bg-white shadow-xl rounded-xl w-full max-w-md p-8">
+<h1 class="text-3xl font-bold text-center text-blue-600">
+Welcome Back
+</h1>
+<p class="text-center text-gray-500 mt-2">
+Sign in to continue
+</p>
+<form id="loginForm" class="mt-8">
+<div class="mb-5">
+<label class="block mb-2 font-medium">
+Email
+</label>
+<input type="email" id="email" placeholder="Enter your email" required class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
+<div class="mb-5">
+<label class="block mb-2 font-medium">
+Password
+</label>
+<input
+type="password"
+id="password"
+placeholder="Enter password"
+required
+class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
+<div class="flex justify-between items-center mb-6">
+<label class="flex items-center gap-2">
+<input type="checkbox">
+<span class="text-sm">
+Remember Me
+</span>
+</label>
+<a href="#" class="text-blue-600 text-sm hover:underline">
+Forgot Password?
+</a>
+</div>
+<button
+type="submit"
+class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg">
+Sign In
+</button>
+</form>
+<div class="mt-6 text-center">
+<p>
+Don't have an account?
+<a
+href="signup.html"
+class="text-blue-600 font-semibold">
+Sign Up
+</a>
+</p>
+</div>
+<div class="mt-8 bg-gray-100 rounded-lg p-4 text-sm">
+<p class="font-semibold">
+Demo Account
+</p>
+<p>Email : user@gmail.com</p>
+<p>Password : 123456</p>
+</div>
+</div>
+</div>
+<script>
+document.getElementById("loginForm").addEventListener("submit",function(e){
+e.preventDefault();
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+if(email.trim() !== "" && password.trim() !== ""){
+window.location.href="dashboard.html";
+}
+else{
+alert("Invalid Email or Password");
+}
+});
+</script>
+</body>
+</html>

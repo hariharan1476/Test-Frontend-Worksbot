@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verify OTP</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+<div class="min-h-screen flex items-center justify-center px-4">
+<div class="bg-white rounded-xl shadow-xl p-8 w-full max-w-md">
+<h1 class="text-3xl font-bold text-center text-blue-600">
+Verify OTP
+</h1>
+<p class="text-center text-gray-500 mt-2">
+Enter the 6-digit verification code sent to your email.
+</p>
+<form id="otpForm" class="mt-8">
+<div class="flex justify-center gap-3">
+<input type="text" maxlength="1" class="otp w-12 h-12 text-center border rounded-lg text-xl font-bold">
+<input type="text" maxlength="1" class="otp w-12 h-12 text-center border rounded-lg text-xl font-bold">
+<input type="text" maxlength="1" class="otp w-12 h-12 text-center border rounded-lg text-xl font-bold">
+<input type="text" maxlength="1" class="otp w-12 h-12 text-center border rounded-lg text-xl font-bold">
+<input type="text" maxlength="1" class="otp w-12 h-12 text-center border rounded-lg text-xl font-bold">
+<input type="text" maxlength="1" class="otp w-12 h-12 text-center border rounded-lg text-xl font-bold">
+</div>
+<button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg mt-8">
+Verify OTP
+</button>
+</form>
+<div class="text-center mt-6">
+<button class="text-blue-600 hover:underline">
+Resend OTP
+</button>
+</div>
+<div class="text-center mt-3">
+<a href="signin.html" class="text-gray-600 hover:text-blue-600">
+← Back to Sign In
+</a>
+</div>
+<div class="mt-8 bg-gray-100 rounded-lg p-4 text-sm text-center">
+<p class="font-semibold">
+Demo OTP
+</p>
+<p>
+123456
+</p>
+</div>
+</div>
+</div>
+<script>
+document.getElementById("otpForm").addEventListener("submit",function(e){
+e.preventDefault();
+let otp="";
+document.querySelectorAll(".otp").forEach(function(box){
+otp+=box.value;
+});
+if(otp.trim() !== ""){
+window.location.href="dashboard.html";
+}
+else{
+alert("Invalid OTP");
+}
+});
+const inputs=document.querySelectorAll(".otp");
+inputs.forEach((input,index)=>{
+input.addEventListener("input",()=>{
+if(input.value.length===1 && index<inputs.length-1){
+inputs[index+1].focus();
+}
+});
+});
+</script>
+</body>
+</html>
