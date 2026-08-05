@@ -3,93 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Tasks</title>
-    <script src="script.js" defer></script>
+    <title>Updated js </title>
 </head>
 <body>
-    <h1 id="title">
-        JavaScript Practice Worksbot - Hari_1476
-    </h1>
-    <p id="text">
-        Click the buttons below to perform JS tasks :)
-    </p>
-    <hr>
-    <button onclick="showAlert()">
-        Alert
-    </button>
-    <br>
-    <br>
-    <button onclick="changeHeading()">
-        Change Heading
-    </button>
-    <br>
-    <br>
-    <button onclick="changeBackground()">
-        Change Background
-    </button>
-    <br>
-    <br>
-    <button onclick="showDate()">
-        Show Date
-    </button>
-    <br>
-    <br>
-    <button onclick="increaseCounter()">
-        Increase Counter
-    </button>
-    <br>
-    <br>
-    <button onclick="resetCounter()">
-        Reset Counter
-    </button>
-    <br>
-    <br>
-    <button onclick="hideText()">
-        Hide Text
-    </button>
-    <br>
-    <br>
-    <button onclick="showText()">
-        Show Text
-    </button>
-    <br>
-    <br>
-    <button onclick="changeTextColor()">
-        Change Text Color
-    </button>
-    <br>
-    <br>
-    <button onclick="changeParagraph()">
-        Change Paragraph
-    </button>
-    <br>
-    <br>
-    <button onclick="changeFontSize()">
-        Change Font Size
-    </button>
-    <br>
-    <br>
-    <button onclick="changeButtonText(this)">
-        Change Button Text
-    </button>
-    <br>
-    <br>
-    <button onclick="countCharacters()">
-        Count Characters
-    </button>
-    <br>
-    <br>
-    <button onclick="uppercaseHeading()">
-        Uppercase Heading
-    </button>
-    <br>
-    <br>
-    <hr>
-    <h2>
-        Counter :
-        <span id="counter">0</span>
-    </h2>
-    <h3 id="date"></h3>
-    <h3 id="result"></h3>
+<h1 id="title">Hello Hari from Worksbot</h1>
+<p id="text">
+    Try the buttons below to perform JS task Developed by Hari
+</p>
+<button onclick="changeText()">Change Text</button>
+<button onclick="changeBackground()">Background</button>
+<button onclick="changeHeadingColor()">Heading Color</button>
+<button onclick="showTime()">Show Time</button>
+<button onclick="increaseCounter()">Counter +</button>
+<button onclick="resetCounter()">Reset Counter</button>
+<button onclick="hideText()">Hide Text</button>
+<button onclick="showText()">Show Text</button>
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Item</button>
+<button onclick="delayMessage()">setTimeout</button>
+<button onclick="resolvePromise()">Resolve Promise</button>
+<button onclick="rejectPromise()">Reject Promise</button>
+<hr>
+<h2>
+Counts :
+<span id="counter">0</span>
+</h2>
+<h3 id="result"></h3>
+<ul id="list">
+<li>Hari 1</li>
+<li>Hari 2</li>
+<li>Hari 3</li>
+</ul>
+<script>
+let counter = 0;
+function changeText(){
+document.getElementById("text").innerHTML =
+"Paragraph Changed Successfully";
+}
+function changeBackground(){
+let colors=[
+"lightblue",
+"lightgreen",
+"lightyellow",
+"lightpink",
+"orange"
+];
+let random=Math.floor(Math.random()*colors.length);
+document.body.style.backgroundColor=colors[random];
+}
+function changeHeadingColor(){
+let colors=[
+"red",
+"blue",
+"green",
+"purple",
+"brown"
+];
+let random=Math.floor(Math.random()*colors.length);
+document.getElementById("title").style.color=colors[random];
+}
+function showTime(){
+document.getElementById("result").innerHTML=
+new Date().toLocaleTimeString();
+}
+function increaseCounter(){
+counter++;
+document.getElementById("counter").innerHTML=counter;
+}
+function resetCounter(){
+counter=0;
+document.getElementById("counter").innerHTML=counter;
+}
+function hideText(){
+document.getElementById("text").style.display="none";
+}
+function showText(){
+document.getElementById("text").style.display="block";
+}
+function addItem(){
+let li=document.createElement("li");
+li.innerHTML="New Item";
+document.getElementById("list").appendChild(li);
+}
+function removeItem(){
+let list=document.getElementById("list");
+if(list.lastElementChild){
+list.removeChild(list.lastElementChild);
+}
+}
+function delayMessage(){
+setTimeout(function(){
+document.getElementById("result").innerHTML=
+"Message after 2 Seconds";
+},2000);
+}
+function resolvePromise(){
+let promise=new Promise(function(resolve,reject){
+resolve("Promise Resolved Successfully");
+});
+promise.then(function(result){
+document.getElementById("result").innerHTML=result;
+});
+}
+function rejectPromise(){
+let promise=new Promise(function(resolve,reject){
+reject("Promise Rejected");
+});
+promise.catch(function(error){
+document.getElementById("result").innerHTML=error;
+});
+}
+</script>
 </body>
 </html>
